@@ -63,7 +63,7 @@ loc = ipinf["loc"]
 print(ipinf)
 
 
-exit()
+
 
 
 
