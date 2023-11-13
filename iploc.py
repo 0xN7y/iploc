@@ -49,9 +49,11 @@ if ipformat(ip) == False:
 
 
 
-
-ipinf = requests.get("https://ipinfo.io/"+ip).text
-
+try:
+    ipinf = requests.get("https://ipinfo.io/"+ip).text
+except:
+    print("No Internet!\n")
+    exit()
 
 ipinf = json.loads(ipinf)
 cu = ipinf['country']
