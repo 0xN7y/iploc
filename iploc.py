@@ -56,11 +56,26 @@ except:
     exit()
 
 ipinf = json.loads(ipinf)
-cu = ipinf['country']
-c = ipinf['city']
-h = ipinf['hostname']
-t = ipinf['timezone']
-loc = ipinf["loc"]
+try:
+    cu = ipinf['country']
+except:
+    cu = "None"
+try:
+    c = ipinf['city']
+except:
+    c = ""
+try:
+
+    h = ipinf['hostname']
+except:
+    h = ""
+try:
+    t = ipinf['timezone']
+except:
+    t= ""
+try:
+    loc = ipinf["loc"]
+except:
 
 print("\n","country : ",cu,"\n","city : ",c,"\n","hostname : ",h,"\n","timezone : ",t)
 
